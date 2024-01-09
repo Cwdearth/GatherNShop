@@ -1,4 +1,4 @@
-package org.students;
+package gathershop.main;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
