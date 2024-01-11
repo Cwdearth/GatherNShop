@@ -1,4 +1,6 @@
 package gathershop.screens;
+import gathershop.map.Map;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.io.File;
@@ -11,6 +13,9 @@ public class Screen
     public Screen(String screenName, String iconName) {
         JFrame gameFrame = new JFrame(Objects.requireNonNull(screenName, "ScreenName cannot be null!"));
         JPanel gamePanel = new JPanel();
+        Map gameMap = new Map();
+
+
 
         try {
             File pathToFile = new File("src/main/resources/" + iconName);
@@ -22,6 +27,9 @@ public class Screen
         gameFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         gameFrame.setMinimumSize(new Dimension(768 ,432));
         gameFrame.add(gamePanel);
+        gamePanel.setBackground(Color.blue);
+        gamePanel.setSize(100,100);
+        //gameFrame.add(gameMap);
         gameFrame.setVisible(true);
     }
 }
